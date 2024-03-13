@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power of Two Checker</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <!-- Write a program that takes an interger as input and returns true if 
+     the input is a power of two and if not a power of two it returns false. -->
+<h1>Power of Two Checker</h1>
+<input type="number" id="inputNumber" placeholder="Enter an integer">
+<button onclick="checkPowerOfTwo()">Check</button>
+<script>
+  const checkPowerOfTwo = () => {
+    const inputNumber = document.getElementById('inputNumber').value;
+    const isPowerOfTwo = n => Math.log2(n) % 1 === 0;
+    if (inputNumber === '') {
+      console.log('Please enter a number.');
+      return;
+    }
+    const number = parseInt(inputNumber);
+    if (isPowerOfTwo(number)) {
+      console.log(`${number} true.`);
+    } else {
+      console.log(`${number} false.`);
+    }
+  };
+</script>
+</body>
+</html>
